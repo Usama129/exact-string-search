@@ -29,7 +29,6 @@ P = ''
 P = P.join(brr)
 
 
-
 print("Running brute-force...")
 start = timer()
 pos, comp = brute_force(P, T)
@@ -38,7 +37,7 @@ if pos == -1:
     print("Could not find pattern in text")
 else:
     print("Found pattern at position", pos+1) # adding 1 to pos because function returns 0-based index
-print("Runtime was",round(bruteforce*1000000),"microseconds. Performed",comp,"comparisons")
+print("Runtime was",round(bruteforce*1000000),"microseconds. Performed",comp,"character comparisons")
 
 print("\nRunning Knuth-Morris-Pratt...")
 start = timer()
@@ -48,7 +47,7 @@ if pos == -1:
     print("Could not find pattern in text")
 else:
     print("Found pattern at position", pos+1)
-print("Runtime was",round(kmp*1000000),"microseconds. Performed",comp,"comparisons")
+print("Runtime was",round(kmp*1000000),"microseconds. Performed",comp,"character comparisons")
 
 print("\nRunning Rabin-Karp...")
 start = timer()
@@ -58,7 +57,7 @@ if pos == -1:
     print("Could not find pattern in text")
 else:
     print("Found pattern at position", pos+1)
-print("Runtime was",round(rk*1000000),"microseconds. Performed",comp,"comparisons")
+print("Runtime was",round(rk*1000000),"microseconds. Performed",comp,"character comparisons")
 
 
 if kmp < bruteforce and kmp < rk:
